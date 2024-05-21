@@ -142,4 +142,31 @@ select * from "Amount of ingredients in recipe" aoiir
 insert into "Measurement units"  values ('Килограммы', 'кг'), ('Жменя', 'жм'), ('Щепотка', 'щеп')
 
 
+SELECT
+  "Ingredient name"
+FROM
+  "Ingredients" order by "Ingredient name" asc
+  limit 5
+
+ 
+select distinct
+	"ID_author" 
+from
+	"Recipe author" 
+
+
+select * from "Recipes" r  
+
+select 
+	count("ID_author") as "Всего авторов рецептов", 
+	count(*) as "Всего рецептов",
+	count(distinct "Recipe_name") as "Всего уникальных рецептов",
+	count("ID_author")/count("Recipe_name") as "В среднем рецептов на 1 автора"
+from "Recipes"  
+
+declare 
+	Auth integer;
+	VsegoR integer;
+	VsegoUnik integer;
+	Sred integer;
 
